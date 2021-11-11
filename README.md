@@ -12,7 +12,11 @@ dit overzicht heet een __graaf__ of in het Engels een __graph__
 
 ## matrix
 
-Voeg een kompas-richting toe. Je mag de richting van het noorden zelf kiezen (hoeft dus niet zoals het in werkelijk is).
+Via een verbingsmatrix kun je aangeven welke punten (vertices) met elkaar verbonden zijn. Op de eerste rij en de eerste kolom worden de index-getallen van de vertrices geplaatst.
+
+![template](web/img/template_matrix.png)
+
+In dit geval gaan we er een gerichte matrix van maken. Voeg een kompas-richting toe. Je mag de richting van het noorden zelf kiezen (hoeft dus niet zoals het in werkelijk is).
 Nu kun je in een (verbindings)matrix aangeven welke punten met elkaar verbonden zijn en in welke richting
 
 
@@ -30,5 +34,3 @@ Nu kun je in een (verbindings)matrix aangeven welke punten met elkaar verbonden 
 |9| | | | | | | |N| | |W| |
 |A| | | | | |N| | | |W| | |
 |B| | | | | | |S| | | | | |
-
-![matrix](web/img/matrix.png)
