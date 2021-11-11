@@ -2,10 +2,10 @@
 
 ## stap 1
 1. ga uit van een plattegrond
+![map](web/img/map_original.png)
 2. geef op de plattegrond posities aan met een stip (vertice)
 3. geef de nodes een getal (index)
 4. verbind de nodes die met elkaar in contact staan met een lijn (edge)
-
 ![graaf](web/img/map_compass.png)
 
 dit overzicht heet een __graaf__ of in het Engels een __graph__
