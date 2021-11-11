@@ -6,7 +6,7 @@
 2. geef op de plattegrond posities aan met een stip (vertice)
 3. geef de nodes een getal (index)
 4. verbind de nodes die met elkaar in contact staan met een lijn (edge)
-![graaf](web/img/map_compass.png)
+![matrix](web/img/node_map.png)
 
 dit overzicht heet een __graaf__ of in het Engels een __graph__
 
@@ -17,6 +17,9 @@ Via een verbingsmatrix kun je aangeven welke punten (vertices) met elkaar verbon
 ![template](web/img/template_matrix.png)
 
 In dit geval gaan we er een gerichte matrix van maken. Voeg een kompas-richting toe. Je mag de richting van het noorden zelf kiezen (hoeft dus niet zoals het in werkelijk is).
+
+![graaf](web/img/map_compass.png)
+
 Nu kun je in een (verbindings)matrix aangeven welke punten met elkaar verbonden zijn en in welke richting
 
 
