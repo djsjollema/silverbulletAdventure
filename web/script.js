@@ -1,43 +1,27 @@
-const posBox = document.getElementById('posBox');
-const myButton = document.getElementById('myButton');
-let feedback = document.getElementById('feedback'); 
-const button_left = document.getElementById('button_left');
-const button_forward = document.getElementById('button_forward');
-const button_right = document.getElementById('button_right');
-const directions = ["N","E","S","W"];
-
 const map = [
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [["N"],["N"],["E"],[" "],["N"],["W"],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["W"],["E"],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
+    [[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
+    [["s"],[" "],["E"],[" "],["N"],["W"],[" "],[" "],[" "],[" "],[" "],[" "]],
+    [[" "],["W"],[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
     [[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
     [[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["E"],[" "],[" "],[" "],[" "],["E"],[" "],[" "],[" "],["S"],[" "]],
+    [[" "],["E"],[" "],[" "],[" "],[" "],["W"],[" "],[" "],[" "],[" "],[" "]],
     [[" "],[" "],[" "],[" "],[" "],["E"],[" "],["W"],[" "],[" "],[" "],["N"]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],["N"],["S"],[" "],[" "]],
+    [[" "],[" "],[" "],[" "],[" "],[" "],["E"],[" "],["N"],["S"],[" "],[" "]],
     [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "]],
     [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],["W"],[" "]],
     [[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],[" "],["W"],[" "],[" "]],
     [[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "]]
 ];
 
-let position = 0;
-let orientation = 0;
+let currentPosition = 0;
 
-fromTo();
+possiblePositions();
 
-myButton.addEventListener('click',()=>{
-    position = posBox.value;
-    fromTo();
-})
-
-
-
-function fromTo(){
-    feedback.innerHTML = "je bent op positie: " + position +"<br>";
-    for(i=0;i<6;i++){
-        if(map[i][position] != " "){
-            feedback.innerHTML += "je kan naar: " + i + " via " + map[i][position] + "<br>";
+function possiblePositions(){
+    console.log("je bent op positie: " + currentPosition);
+    for(i=0;i<map.length;i++){
+        if(map[i][currentPosition] != " "){
+            console.log("je kan naar: " + i + " via " + map[i][currentPosition]);
         }
     
     }
