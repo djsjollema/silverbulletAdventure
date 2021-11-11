@@ -1,10 +1,10 @@
 # the Silver Bullet Adventure (SBA)
 
 ## stap 1
-1 ga uit van een plattegrond
-2 geef op de plattegrond posities aan met een stip (vertice)
-3 geef de nodes een getal (index)
-4 verbind de nodes die met elkaar in contact staan met een lijn (edge)
+1. ga uit van een plattegrond
+2. geef op de plattegrond posities aan met een stip (vertice)
+3. geef de nodes een getal (index)
+4. verbind de nodes die met elkaar in contact staan met een lijn (edge)
 
 ![graaf](web/img/map_compass.png)
 
