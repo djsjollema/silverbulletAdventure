@@ -17,6 +17,7 @@ let currentPosition = 0;
 
 possiblePositions();
 
+
 function possiblePositions(){
     console.log("je bent op positie: " + currentPosition);
     for(i=0;i<map.length;i++){

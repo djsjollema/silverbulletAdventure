@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="naam">naam</div>
+        <div id="omschrijving"></div>
+        <img id="afbeelding" width="200px"/>
+        <div id="richtingen">richtingen</div>
+        <input type="text"  id="mijnActie">
+    </div>
+    <script>
+        const naam = document.getElementById('naam');
+        const omschrijving = document.getElementById('omschrijving');
+        const afbeelding = document.getElementById('afbeelding');
+        const richtingen = document.getElementById('richtingen');
+        const mijnActie = document.getElementById('');
+
+        let position = 1;
+       
+
+        const nodes =
+        [ 
+            {
+                "naam": "buiten",
+                "omschrijving":"je staat voor een gebouw",
+                "afbeelding": "0.jpg",
+                "mogelijkheden": [
+                    {"richting":"noord","doel":2},
+                    {"richting":"zuid","doel":3}
+                ]
+            },
+            {
+                "naam": "hal",
+                "omschrijving":"je staat ergens",
+                "afbeelding": "1.jpg",
+                "mogelijkheden": [
+                    {"richting":"west","doel":4},
+                    {"richting":"zuid","doel":1}
+                ]
+            }
+        ];
+
+        gotoPosition(position);
+
+        function gotoPosition(pos){
+            naam.innerText = nodes[pos].naam;
+            omschrijving.innerText = nodes[pos].omschrijving;
+            afbeelding.src = "img/" + nodes[pos].afbeelding;
+            richtingen.innerText = "u kunt kiezen uit:";
+            nodes[pos].mogelijkheden.map((r)=>{
+                richtingen.innerHTML += r.richting + "&nbsp;";
+            })
+        };
+
+    </script>
+</body>
+</html>
