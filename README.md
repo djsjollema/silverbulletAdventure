@@ -10,68 +10,18 @@
 
 dit overzicht heet een __graaf__ of in het Engels een __graph__
 
+## json
+Beschrijf elke node zodat deze informatie in een json-object kan worden opgenomen
+![json](web/img/json.png)
+
 ## matrix
 
 Via een verbingsmatrix kun je aangeven welke punten (vertices) met elkaar verbonden zijn. Op de eerste rij en de eerste kolom worden de index-getallen van de vertrices geplaatst.
 
 ![template](web/img/template_matrix.png)
 
-In dit geval gaan we er een gerichte matrix van maken. Voeg een kompas-richting toe. Je mag de richting van het noorden zelf kiezen (hoeft dus niet zoals het in werkelijk is).
 
 ![graaf](web/img/map_compass.png)
 
 Nu kun je in een (verbindings)matrix aangeven welke punten met elkaar verbonden zijn en in welke richting
 
-
-| |0|1|2|3|4|5|6|7|8|9|A|B|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-|0| |N| | | | | | | | | | |
-|1|S| |E| |N|W| | | | | | |
-|2| |W|E|N| | | | | | | | |
-|3| | |S| | | | | | | | | |
-|4| |S| | | | | | | | | | |
-|5| |E| | | | |E| | | |S| |
-|6| | | | | |E| |W| | | |N|
-|7| | | | | | | | |N|S| | |
-|8| | | | | | | |S| | | | |
-|9| | | | | | | |N| | |W| |
-|A| | | | | |N| | | |W| | |
-|B| | | | | | |S| | | | | |
-
-## omzetten matrix naar Array in javaScript
-
-begin met een lege array 
-
-const map = [
-];
-
-vul de array met arrays
-
-const map = [
-    [],[],[],[],[],[],[],[],[],[],[]
-];
-
-vul de arrays met arrays
-[[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]]
-
-nu kan de matrix overgenomen worden in de vorm:
-
-
-const map = [
-    [[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [["s"],[" "],["E"],[" "],["N"],["W"],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["W"],[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["E"],[" "],[" "],[" "],[" "],["W"],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],["E"],[" "],["W"],[" "],[" "],[" "],["N"]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],["E"],[" "],["N"],["S"],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],["W"],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],[" "],["W"],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "]]
-];
-
-
-de multidimensionale array kan nu uitgelezen worden in de vorm
-map[kolom][rij]

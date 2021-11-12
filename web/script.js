@@ -1,29 +1,33 @@
-const map = [
-    [[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [["s"],[" "],["E"],[" "],["N"],["W"],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["W"],[" "],["N"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["S"],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],["E"],[" "],[" "],[" "],[" "],["W"],[" "],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],["E"],[" "],["W"],[" "],[" "],[" "],["N"]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],["E"],[" "],["N"],["S"],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],["W"],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],["N"],[" "],[" "],[" "],["W"],[" "],[" "]],
-    [[" "],[" "],[" "],[" "],[" "],[" "],["S"],[" "],[" "],[" "],[" "],[" "]]
+const naam = document.getElementById('naam');
+const omschrijving = document.getElementById('omschrijving');
+const afbeelding = document.getElementById('afbeelding');
+const richtingen = document.getElementById('richtingen');
+const mijnActie = document.getElementById('');
+
+let position = 1;
+
+
+const nodes =
+[ 
+    {
+        "naam": "buiten",
+        "omschrijving":"je staat voor een gebouw",
+        "afbeelding": "0.jpg",
+        "mogelijkheden": [
+            {"richting":"noord","doel":2},
+            {"richting":"zuid","doel":3}
+        ]
+    }
 ];
 
-let currentPosition = 0;
+gotoPosition(position);
 
-possiblePositions();
-
-
-function possiblePositions(){
-    console.log("je bent op positie: " + currentPosition);
-    for(i=0;i<map.length;i++){
-        if(map[i][currentPosition] != " "){
-            console.log("je kan naar: " + i + " via " + map[i][currentPosition]);
-        }
-    
-    }
-}
+function gotoPosition(pos){
+    naam.innerText = nodes[pos].naam;
+    omschrijving.innerText = nodes[pos].omschrijving;
+    afbeelding.src = "img/" + nodes[pos].afbeelding;
+    richtingen.innerText = "u kunt kiezen uit:";
+    nodes[pos].mogelijkheden.map((r)=>{
+        richtingen.innerHTML += r.richting + "&nbsp;";
+    })
+};
